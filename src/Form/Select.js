@@ -1,6 +1,6 @@
-import React, { PropTypes } = from 'react'
-import ReactSelect, { Creatable } = from 'react-select'
-import Wrapper = from './Wrapper'
+import React, { PropTypes } from 'react'
+import ReactSelect, { Creatable } from 'react-select'
+import Wrapper from './Wrapper'
 
 const Select = ({ label, value, onChange, description, options, multi, clearable, creatable }) => {
   const Component = creatable ? Creatable : ReactSelect

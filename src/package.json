@@ -1,6 +1,6 @@
 {
   "name": "cerebro-ui",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Package with common UI components for Cerebro plugins",
   "main": "index.js",
   "repository": "KELiON/cerebro-ui",
