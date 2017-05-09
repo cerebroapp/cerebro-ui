@@ -1,13 +1,4 @@
-import Checkbox from './Checkbox'
-import Text from './Text'
-import Select from './Select'
-import Wrapper from './Wrapper'
-
-export Checkbox
-export Text
-export Select
-export Wrapper
-
-export default {
-  Checkbox, Text, Select, Wrapper
-}
+export { default as Checkbox } from './Checkbox';
+export { default as Text } from './Text';
+export { default as Select } from './Select';
+export { default as Wrapper } from './Wrapper';
