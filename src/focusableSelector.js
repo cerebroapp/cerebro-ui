@@ -2,7 +2,7 @@
  * DOM selector for all focusable elements
  * @type {String}
  */
-module.exports = [
+export default [
   // Links & areas with href attribute
   'a[href]',
   'area[href]',

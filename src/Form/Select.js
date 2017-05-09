@@ -1,6 +1,6 @@
-const React = require('react')
-const { default: ReactSelect, Creatable } = require('react-select')
-const Wrapper = require('./Wrapper')
+import React, { PropTypes } = from 'react'
+import ReactSelect, { Creatable } = from 'react-select'
+import Wrapper = from './Wrapper'
 
 const Select = ({ label, value, onChange, description, options, multi, clearable, creatable }) => {
   const Component = creatable ? Creatable : ReactSelect
@@ -24,18 +24,18 @@ const Select = ({ label, value, onChange, description, options, multi, clearable
 }
 
 Select.propTypes = {
-  label: React.PropTypes.string,
-  value: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.number,
-    React.PropTypes.array,
+  label: PropTypes.string,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.array,
   ]),
-  onChange: React.PropTypes.func.isRequired,
-  description: React.PropTypes.string,
-  options: React.PropTypes.array.isRequired,
-  multi: React.PropTypes.bool,
-  clearable: React.PropTypes.bool,
-  creatable: React.PropTypes.bool
+  onChange: PropTypes.func.isRequired,
+  description: PropTypes.string,
+  options: PropTypes.array.isRequired,
+  multi: PropTypes.bool,
+  clearable: PropTypes.bool,
+  creatable: PropTypes.bool
 }
 
 export default Select

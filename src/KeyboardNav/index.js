@@ -1,5 +1,5 @@
-const React = require('react')
-const focusableSelector = require('../focusableSelector')
+import React, { PropTypes } from 'react'
+import focusableSelector from '../focusableSelector'
 
 /**
  * Focus element with index from elements array.
@@ -84,10 +84,10 @@ class KeyboardNav extends React.Component {
 }
 
 KeyboardNav.propTypes = {
-  children: React.PropTypes.oneOfType([
-    React.PropTypes.element,
-    React.PropTypes.arrayOf(React.PropTypes.element),
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element),
   ])
 }
 
-module.exports = KeyboardNav
+export default KeyboardNav

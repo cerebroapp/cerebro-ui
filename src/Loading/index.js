@@ -1,7 +1,7 @@
-const React = require('react')
-const styles = require('./styles.css')
+import React from 'react'
+import styles from './styles.css'
 
-module.exports = () => (
+export default () => (
   <div className={styles.spinner}>
     <div className={styles.bounce1}></div>
     <div className={styles.bounce2}></div>

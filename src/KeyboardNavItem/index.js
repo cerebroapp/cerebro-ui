@@ -1,5 +1,5 @@
-const React = require('react')
-const styles = require('./styles.css')
+import React, { PropTypes } from 'react'
+import styles from './styles.css'
 
 const KeyboardNavItem = ({ tagName, ...props }) => {
   let className = styles.item
@@ -28,10 +28,10 @@ const KeyboardNavItem = ({ tagName, ...props }) => {
 }
 
 KeyboardNavItem.propTypes = {
-  className: React.PropTypes.string,
-  tagName: React.PropTypes.string,
-  onSelect: React.PropTypes.func,
-  onKeyDown: React.PropTypes.func,
+  className: PropTypes.string,
+  tagName: PropTypes.string,
+  onSelect: PropTypes.func,
+  onKeyDown: PropTypes.func,
 }
 
-module.exports = KeyboardNavItem
+export default KeyboardNavItem

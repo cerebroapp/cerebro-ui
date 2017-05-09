@@ -1,5 +1,5 @@
-const React = require('react')
-const styles = require('./styles.css')
+import React, { PropTypes } from 'react'
+import styles from './styles.css'
 
 const Checkbox = ({ label, value, onChange, description }) => (
   <div className={styles.item}>
@@ -19,10 +19,10 @@ const Checkbox = ({ label, value, onChange, description }) => (
 )
 
 Checkbox.propTypes = {
-  label: React.PropTypes.string,
-  value: React.PropTypes.bool,
-  onChange: React.PropTypes.func.isRequired,
-  description: React.PropTypes.string,
+  label: PropTypes.string,
+  value: PropTypes.bool,
+  onChange: PropTypes.func.isRequired,
+  description: PropTypes.string,
 }
 
-module.exports = Checkbox
+export default Checkbox

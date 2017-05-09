@@ -1,5 +1,5 @@
-const React = require('react')
-const styles = require('./styles.css')
+import React, { PropTypes } from 'react'
+import styles from './styles.css'
 
 const Wrapper = ({ label, description, children }) => (
   <div className={styles.item}>
@@ -12,9 +12,9 @@ const Wrapper = ({ label, description, children }) => (
 )
 
 Wrapper.propTypes = {
-  label: React.PropTypes.string,
-  description: React.PropTypes.string,
-  children: React.PropTypes.any
+  label: PropTypes.string,
+  description: PropTypes.string,
+  children: PropTypes.any
 }
 
-module.exports = Wrapper
+export default Wrapper

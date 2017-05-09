@@ -1,13 +1,19 @@
-const Loading = require('./Loading')
-const Form = require('./Form')
-const KeyboardNav = require('./KeyboardNav')
-const KeyboardNavItem = require('./KeyboardNavItem')
-const focusableSelector = require('./focusableSelector')
+import Loading from './Loading'
+import Form from './Form'
+import KeyboardNav from './KeyboardNav'
+import KeyboardNavItem from './KeyboardNavItem'
+import focusableSelector from './focusableSelector'
 
-module.exports = {
+export default {
   Loading,
   Form,
   KeyboardNav,
   KeyboardNavItem,
   focusableSelector
 }
+
+export Loading
+export Form
+export KeyboardNav
+export KeyboardNavItem
+export focusableSelector

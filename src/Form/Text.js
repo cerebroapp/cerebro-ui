@@ -1,6 +1,6 @@
-const React = require('react')
-const Wrapper = require('./Wrapper')
-const styles = require('./styles.css')
+import React from 'react'
+import Wrapper from './Wrapper'
+import styles from './styles.css'
 
 const Input = ({ label, value, onChange, description, type }) => (
   <Wrapper label={label} description={description}>
@@ -24,4 +24,4 @@ Input.propTypes = {
   type: React.PropTypes.string.isRequired,
 }
 
-module.exports = Input
+export default Input

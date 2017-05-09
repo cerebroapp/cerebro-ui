@@ -1,8 +1,13 @@
-const Checkbox = require('./Checkbox')
-const Text = require('./Text')
-const Select = require('./Select')
-const Wrapper = require('./Wrapper')
+import Checkbox from './Checkbox'
+import Text from './Text'
+import Select from './Select'
+import Wrapper from './Wrapper'
 
-module.exports = {
+export Checkbox
+export Text
+export Select
+export Wrapper
+
+export default {
   Checkbox, Text, Select, Wrapper
 }
