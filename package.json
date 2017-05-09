@@ -1,0 +1,28 @@
+{
+  "name": "cerebro-ui",
+  "version": "0.0.1",
+  "description": "Package with common UI components for Cerebro plugins",
+  "main": "src/index.js",
+  "repository": "KELiON/cerebro-ui",
+  "keywords": [
+    "cerebro",
+    "ui",
+    "components"
+  ],
+  "author": {
+    "name": "Alexandr Subbotin",
+    "email": "kelionweb@gmail.com",
+    "url": "asubbotin.ru"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kelion/cerebro-ui/issues"
+  },
+  "homepage": "https://github.com/kelion/cerebro-ui#readme",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-input-autosize": "^1.1.0",
+    "react-select": "^1.0.0-rc.2"
+  }
+}
