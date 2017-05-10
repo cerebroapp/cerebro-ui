@@ -1,24 +1,24 @@
 .spinner {
   width: 70px;
   text-align: center;
+}
 
-  div {
-    width: 18px;
-    height: 18px;
-    background-color: var(--secondary-font-color);
+.spinner div {
+  width: 18px;
+  height: 18px;
+  background-color: var(--secondary-font-color);
 
-    border-radius: 100%;
-    display: inline-block;
-    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-  }
+  border-radius: 100%;
+  display: inline-block;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
 
-  .bounce1 {
-    animation-delay: -0.32s;
-  }
+.spinner .bounce1 {
+  animation-delay: -0.32s;
+}
 
-  .bounce2 {
-    animation-delay: -0.16s;
-  }
+.spinner .bounce2 {
+  animation-delay: -0.16s;
 }
 
 @keyframes sk-bouncedelay {

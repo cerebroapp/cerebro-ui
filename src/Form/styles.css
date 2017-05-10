@@ -3,9 +3,10 @@
   flex-direction: row;
   width: 250px;
   margin-top: 20px;
-  &:first-child {
-    margin-top: 0;
-  }
+}
+
+.item:first-child {
+  margin-top: 0;
 }
 
 .itemValue {
@@ -52,15 +53,16 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   cursor: pointer;
-  &:focus {
-    border-color: #007eff;
-    outline: 0;
-    outline-color: transparent;
-    outline-style: none;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 3px rgba(0, 126, 255, 0.1);
-  }
+}
 
-  &:hover {
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
-  }
+.button:focus {
+  border-color: #007eff;
+  outline: 0;
+  outline-color: transparent;
+  outline-style: none;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 3px rgba(0, 126, 255, 0.1);
+}
+
+.button:hover {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
 }
