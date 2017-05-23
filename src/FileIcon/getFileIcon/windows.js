@@ -6,7 +6,7 @@ import { remote } from 'electron'
  * @param  {String} path File path
  * @return {Promise<String>} Promise resolves base64-encoded source of icon
  */
-export default function getFileIcon(path) {
+module.exports = function getFileIcon(path) {
   return new Promise((accept, reject) => {
     remote.app.getFileIcon(path, (err, icon) => {
       if (err) return reject(err)

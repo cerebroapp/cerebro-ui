@@ -1,5 +1,5 @@
 /* eslint new-cap: 0 */
-import macOS from 'nodobjc'
+const macOS = window.require('nodobjc')
 
 macOS.framework('Foundation')
 macOS.framework('AppKit')
@@ -27,7 +27,7 @@ const readIcon = (path) => {
  * @param  {[type]} options.height
  * @return {Promise<String>} Promise resolves base64-encoded source of icon
  */
-export default function getFileIcon(path, { width = 128, height = 128 } = {}) {
+module.exports = function getFileIcon(path, { width = 128, height = 128 } = {}) {
   return new Promise(resolve => {
     const pool = macOS.NSAutoreleasePool('alloc')('init')
     const icon = readIcon(path)

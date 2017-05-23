@@ -1,4 +1,4 @@
-import { memoize } from 'cerebro-tools'
+const { memoize } = require('cerebro-tools')
 const empty = () => Promise.reject()
 
 /* eslint-disable global-require */
@@ -14,7 +14,7 @@ if (process.platform === 'win32') {
   getFileIcon = require('./windows')
 }
 
-export default memoize(getFileIcon)
+module.exports = memoize(getFileIcon)
 
 /* eslint-enable global-require */
 /* eslint-disable import/no-mutable-exports */
