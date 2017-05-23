@@ -1,5 +1,9 @@
 /* eslint new-cap: 0 */
-const macOS = window.require('nodobjc')
+const macOS = typeof window !== 'undefined'
+  ? window.require('nodobjc')
+  : {
+    framework: () => {}
+  }
 
 macOS.framework('Foundation')
 macOS.framework('AppKit')
