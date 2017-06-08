@@ -1,4 +1,4 @@
-import { remote } from 'electron'
+const { remote } = require('electron')
 
 /**
  * Get system icon for file
