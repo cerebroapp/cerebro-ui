@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react'
 import FileIcon from '../FileIcon'
 import { memoize } from 'cerebro-tools'
+import FontAwesome from 'react-fontawesome'
 
 /**
  * Check if provided string is an image src
@@ -12,6 +13,11 @@ import { memoize } from 'cerebro-tools'
 const isImage = (path) => !!path.match(/(^data:)|(\.(png|jpe?g|svg|ico)$)/)
 
 /**
+ * Check if provided string matches a FontAwesome icon
+ */
+const isFontAwesome = (path) => path.match(/^fa-(.+)$/)
+
+/**
  * This component renders:
  *   – if `options.path` is an image this image will be rendered. Supported formats are:
  *     png, jpg, svg and icns
@@ -21,9 +27,19 @@ const isImage = (path) => !!path.match(/(^data:)|(\.(png|jpe?g|svg|ico)$)/)
  * @return {Function}
  */
 const SmartIcon = ({ className, path }) => (
-  isImage(path) ?
-    <img src={path} alt={path} className={className} /> :
-    <FileIcon path={path} className={className} />
+  const fontAwesomeMatches = isFontAwesome(path)
+  if (!!fontAwesomeMatches) {
+    return <FontAwesome
+              name={fontAwesomeMatches[1]}
+              size="2x"
+              className={className} />
+  }
+
+  return (
+    isImage(path) ?
+      <img src={path} alt={path} className={className} /> :
+        <FileIcon path={path} className={className} />
+  )
 )
 
 SmartIcon.propTypes = {
