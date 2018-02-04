@@ -26,7 +26,7 @@ const isFontAwesome = (path) => path.match(/^fa-(.+)$/)
  * @param  {String} options.path
  * @return {Function}
  */
-const SmartIcon = ({ className, path }) => (
+const SmartIcon = ({ className, path }) => {
   const fontAwesomeMatches = isFontAwesome(path)
   if (!!fontAwesomeMatches) {
     return <FontAwesome
@@ -40,7 +40,7 @@ const SmartIcon = ({ className, path }) => (
       <img src={path} alt={path} className={className} /> :
         <FileIcon path={path} className={className} />
   )
-)
+}
 
 SmartIcon.propTypes = {
   path: PropTypes.string.isRequired,
