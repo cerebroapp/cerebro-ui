@@ -25,6 +25,9 @@
     "react-input-autosize": "^1.1.0",
     "react-select": "^1.0.0-rc.2"
   },
+  "peerDependencies": {
+    "@electron/remote": "2.0.8"
+  },
   "devDependencies": {
     "prop-types": "15.8.1"
   }
