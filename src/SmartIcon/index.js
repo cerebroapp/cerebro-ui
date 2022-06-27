@@ -29,7 +29,7 @@ const isFontAwesome = (path) => path.match(/^fa-(.+)$/)
  */
 const SmartIcon = ({ className, path }) => {
   const fontAwesomeMatches = isFontAwesome(path)
-  if (!!fontAwesomeMatches) {
+  if (fontAwesomeMatches) {
     return <FontAwesome
               name={fontAwesomeMatches[1]}
               size="2x"

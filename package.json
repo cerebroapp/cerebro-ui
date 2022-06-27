@@ -2,7 +2,7 @@
   "name": "cerebro-ui",
   "version": "0.0.16",
   "description": "Package with common UI components for Cerebro plugins",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "repository": "cerebroapp/cerebro-ui",
   "keywords": [
     "cerebro",
@@ -19,16 +19,21 @@
     "url": "https://github.com/cerebroapp/cerebro-ui/issues"
   },
   "homepage": "https://github.com/cerebroapp/cerebro-ui#readme",
-  "dependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-input-autosize": "^1.1.0",
-    "react-select": "^1.0.0-rc.2"
+  "scripts": {
+    "build": "cerebro-scripts build",
+    "prepublish": "rimraf ./dist && npm run build"
   },
-  "peerDependencies": {
-    "@electron/remote": "2.0.8"
+  "dependencies": {
+    "@electron/remote": "2.0.8",
+    "cerebro-tools": "0.1.8",
+    "react": "15.7.0",
+    "react-dom": "15.7.0",
+    "react-fontawesome": "1.7.1",
+    "react-input-autosize": "1.2.0",
+    "react-select": "1.3.0"
   },
   "devDependencies": {
+    "cerebro-scripts": "0.0.25",
     "prop-types": "15.8.1"
   }
 }
