@@ -16,13 +16,16 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kelion/cerebro-ui/issues"
+    "url": "https://github.com/cerebroapp/cerebro-ui/issues"
   },
-  "homepage": "https://github.com/kelion/cerebro-ui#readme",
+  "homepage": "https://github.com/cerebroapp/cerebro-ui#readme",
   "dependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-input-autosize": "^1.1.0",
     "react-select": "^1.0.0-rc.2"
+  },
+  "devDependencies": {
+    "prop-types": "15.8.1"
   }
 }

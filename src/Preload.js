@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
+import PropTypes from 'prop-types'
 
 /**
  * Component that renders child function only after props.promise is resolved or rejected
@@ -28,11 +29,11 @@ class Preload extends Component {
 }
 
 Preload.propTypes = {
-  loader: React.PropTypes.element,
-  children: React.PropTypes.func.isRequired,
-  promise: React.PropTypes.shape({
-    then: React.PropTypes.func,
-    catch: React.PropTypes.func
+  loader: PropTypes.element,
+  children: PropTypes.func.isRequired,
+  promise: PropTypes.shape({
+    then: PropTypes.func,
+    catch: PropTypes.func
   }).isRequired
 }
 
