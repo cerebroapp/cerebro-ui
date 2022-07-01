@@ -1,6 +1,6 @@
 {
   "name": "@cerebroapp/cerebro-ui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Package with common UI components for Cerebro plugins",
   "main": "dist/index.js",
   "repository": "cerebroapp/cerebro-ui",
@@ -37,6 +37,6 @@
     "prop-types": "15.8.1"
   },
   "devDependencies": {
-    "cerebro-scripts": "0.0.25"
+    "@cerebroapp/cerebro-scripts": "1.0.0-alpha.6"
   }
 }
