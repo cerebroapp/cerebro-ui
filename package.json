@@ -13,10 +13,15 @@
     "components"
   ],
   "author": {
-    "name": "Alexandr Subbotin",
+    "name": "CerebroApp Organization",
     "email": "kelionweb@gmail.com",
-    "url": "asubbotin.ru"
+    "url": "https://github.com/cerebroapp"
   },
+  "contributors": [
+    "Alexandr Subbotin <kelionweb@gmail.com> (https://github.com/KELiON)",
+    "Gustavo Pereira <oguhpereira@protonmail.com (https://github.com/oguhpereira)",
+    "David Jiménez <dubisdev@gmail.com> (https://dubis.dev)"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/cerebroapp/cerebro-ui/issues"

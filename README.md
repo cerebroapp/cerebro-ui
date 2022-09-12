@@ -33,7 +33,7 @@ const Preview = ({ items, onSelect }) => (
 ### Loading
 For consistence, it is recommended to use one loading spinner component in all plugins:
 
-```js
+```jsx
 import { Loading } from 'cerebro-ui'
 
 const Preview = ({ isLoading }) => (
@@ -45,7 +45,7 @@ const Preview = ({ isLoading }) => (
 ### Preload
 In most cases `<Loading />` component is displayed until some promise resolved/rejected. In this case to simplify component code and remove unnecessary `state` with loading/loaded flags, `<Preload />` component could be used:
 
-```js
+```jsx
 import { Preload, Loading } from 'cerebro-ui'
 
 const Preview = (promise) => (
@@ -57,7 +57,7 @@ const Preview = (promise) => (
 ```
 
 ### Form elements
-```js
+```jsx
 import { Button, Checkbox, Select, Text } from 'cerebro-ui/Form'
 ```
 
@@ -70,4 +70,4 @@ import { Button, Checkbox, Select, Text } from 'cerebro-ui/Form'
 
 ## License
 
-MIT © [Alexandr Subbotin](http://asubbotin.ru)
+MIT © [CerebroApp](https://github.com/cerebroapp/cerebro-ui/blob/master/LICENSE)
