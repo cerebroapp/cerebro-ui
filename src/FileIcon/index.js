@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import Preload from '../Preload'
 import getFileIcon from './getFileIcon'
 import { memoize } from 'cerebro-tools'

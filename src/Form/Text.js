@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Wrapper from './Wrapper'
 import styles from './styles.css'
 
@@ -14,14 +15,14 @@ const Input = ({ label, value, onChange, description, type }) => (
 )
 
 Input.propTypes = {
-  label: React.PropTypes.string,
-  value: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.number,
+  label: PropTypes.string,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
   ]),
-  onChange: React.PropTypes.func.isRequired,
-  description: React.PropTypes.string,
-  type: React.PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  description: PropTypes.string,
+  type: PropTypes.string.isRequired,
 }
 
 export default Input

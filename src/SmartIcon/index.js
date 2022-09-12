@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import FileIcon from '../FileIcon'
 import { memoize } from 'cerebro-tools'
 import FontAwesome from 'react-fontawesome'
@@ -28,7 +29,7 @@ const isFontAwesome = (path) => path.match(/^fa-(.+)$/)
  */
 const SmartIcon = ({ className, path }) => {
   const fontAwesomeMatches = isFontAwesome(path)
-  if (!!fontAwesomeMatches) {
+  if (fontAwesomeMatches) {
     return <FontAwesome
               name={fontAwesomeMatches[1]}
               size="2x"
