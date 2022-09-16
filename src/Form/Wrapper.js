@@ -1,6 +1,5 @@
-import React from 'react'
 import PropTypes from 'prop-types'
-import styles from './styles.css'
+import styles from './styles.module.css'
 
 const Wrapper = ({ label, description, children }) => (
   <div className={styles.item}>

@@ -1,7 +1,6 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 import Wrapper from './Wrapper'
-import styles from './styles.css'
+import styles from './styles.module.css'
 
 const Input = ({ label, value, onChange, description, type }) => (
   <Wrapper label={label} description={description}>

@@ -1,4 +1,3 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 import ReactSelect, { Creatable } from 'react-select'
 import Wrapper from './Wrapper'
