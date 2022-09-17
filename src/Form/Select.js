@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
-import ReactSelect, { Creatable } from 'react-select'
+import ReactSelect from 'react-select'
+import Creatable from "react-select/creatable"
 import Wrapper from './Wrapper'
 
 const Select = ({ label, value, onChange, description, options, multi, clearable, creatable }) => {
@@ -7,7 +8,7 @@ const Select = ({ label, value, onChange, description, options, multi, clearable
   return (
     <Wrapper label={label} description={description}>
       <Component
-        multi={multi}
+        isMulti={multi}
         value={value}
         clearable={clearable}
         options={options}
