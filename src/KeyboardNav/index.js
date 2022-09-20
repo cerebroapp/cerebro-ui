@@ -71,17 +71,18 @@ const onKeyDown = (wrapper, event) => {
   }
 }
 
-class KeyboardNav extends React.Component {
-  onKeyDown(event) {
-    onKeyDown(this.wrapper, event)
+const KeyboardNav = ({ children }) => {
+  const ref = useRef(null)
+
+  const handleKeyDown = (event) => {
+    onKeyDown(ref, event)
   }
-  render() {
-    return (
-      <div onKeyDown={this.onKeyDown.bind(this)} ref={(el) => { this.wrapper = el }}>
-        {this.props.children}
-      </div>
-    )
-  }
+
+  return (
+    <div ref={ref} onKeyDown={handleKeyDown}>
+      {children}
+    </div>
+  )
 }
 
 KeyboardNav.propTypes = {

@@ -1,6 +1,5 @@
-import React from 'react'
 import PropTypes from 'prop-types'
-import styles from './styles.css'
+import styles from './styles.module.css'
 
 const KeyboardNavItem = ({ tagName, ...props }) => {
   let className = styles.item
