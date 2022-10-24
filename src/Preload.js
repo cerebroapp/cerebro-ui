@@ -1,26 +1,34 @@
-import { useEffect } from 'react'
+import { Component } from 'react'
 import PropTypes from 'prop-types'
 
 /**
  * Component that renders child function only after props.promise is resolved or rejected
  * You can provide props.loader that will be rendered before
- */
+  @deprecated
+*/
 
-const Preload = ({ loader, children, promise }) => {
-  const [result, setResult] = useState(null)
-  const [error, setError] = useState(null)
-
-  useEffect(() => {
-    promise
-      .then(result => setResult(result))
-      .catch(error => setError(error))
-  },[promise])
-
-  if (result || error) {
-    return children(result, error)
+class Preload extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      result: null,
+      error: null
+    }
   }
-
-  return loader || null
+  componentDidMount() {
+    console.warn("This component has been deprecated. Please use the new useState hook instead.")
+    this.props.promise
+      .then(result => this.setState({ result }))
+      .catch(error => this.setState({ error }))
+  }
+  render() {
+    const { loader, children } = this.props
+    const { result, error } = this.state
+    if (result || error) {
+      return children(result, error)
+    }
+    return loader || null
+  }
 }
 
 Preload.propTypes = {
