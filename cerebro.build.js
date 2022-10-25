@@ -1,5 +1,6 @@
 module.exports = {
   entryPoints: ["./src/index.js"],
   platform: "node",
-  external: ["electron"]
+  external: ["electron"],
+  minify: true
 };
