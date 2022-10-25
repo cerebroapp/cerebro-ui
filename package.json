@@ -39,12 +39,13 @@
     "react": "16.14.0",
     "react-dom": "16.14.0",
     "react-fontawesome": "1.7.1",
-    "react-select": "3.2.0"
+    "react-select": "3.2.0",
+    "simple-plist": "1.1.0"
   },
   "devDependencies": {
     "@cerebroapp/cerebro-scripts": "1.0.0-alpha.6"
   },
   "peerDependencies": {
-    "electron": "19.0.7"
+    "electron": "20.2.0"
   }
 }
