@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Preload from '../Preload'
 import getFileIcon from './getFileIcon'
 import { memoize } from 'cerebro-tools'
 
@@ -12,11 +11,11 @@ import { memoize } from 'cerebro-tools'
  * @param  {String} options.path
  * @return {Function}
  */
-const FileIcon = ({ className, path }) => (
-  <Preload promise={getFileIcon(path)} key={path}>
-    {(src) => <img src={src} alt="" className={className} />}
-  </Preload>
-)
+const FileIcon = ({ className, path }) => {
+  const src = getFileIcon(path)
+  
+  return src ? <img src={src} alt="" className={className} />: null
+}
 
 FileIcon.propTypes = {
   className: PropTypes.string,

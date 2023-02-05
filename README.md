@@ -43,20 +43,6 @@ const Preview = ({ isLoading }) => (
 
 ```
 
-### Preload
-In most cases `<Loading />` component is displayed until some promise resolved/rejected. In this case to simplify component code and remove unnecessary `state` with loading/loaded flags, `<Preload />` component could be used:
-
-```jsx
-import { Preload, Loading } from 'cerebro-ui'
-
-const Preview = (promise) => (
-  <Preload promise={promise} loader=>{Loading}>
-    { (promiseResult) => <YourComponent someProp={promiseResult} /> }
-  </Preload>
-)
-
-```
-
 ### Form elements
 
 ```jsx
