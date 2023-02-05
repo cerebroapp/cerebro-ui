@@ -3,6 +3,7 @@
 > It is UI components library for [Cerebro app](http://www.cerebroapp.com) plugins
 
 ## Components
+
 This package contains main UI elements that you need to use in your plugin previews:
 
 ### Keyboard navigation lists
@@ -57,6 +58,7 @@ const Preview = (promise) => (
 ```
 
 ### Form elements
+
 ```jsx
 import { Button, Checkbox, Select, Text } from 'cerebro-ui/Form'
 ```
@@ -64,9 +66,7 @@ import { Button, Checkbox, Select, Text } from 'cerebro-ui/Form'
 
 ## Related
 
-* [Cerebro](http://github.com/KELiON/cerebro) – main repo for Cerebro app;
-* [cerebro-tools](http://github.com/KELiON/cerebro-tools) – package with tools to simplify package creation;
-* [cerebro-plugin](http://github.com/KELiON/cerebro-tools) – boilerplate to create cerebro plugins;
+* [Cerebro](https://github.com/cerebroapp/cerebro) – main repo for Cerebro app;
 
 ## License
 
