@@ -34,10 +34,9 @@ const isVimMode = (event) => (key) => (
 /**
  * Handler keydown in keyboard navigation component
  *
- * @param  {DOMElement} wrapper
  * @param  {KeyboardEvent} event
  */
-const onKeyDown = (wrapper, event) => {
+const onKeyDown = (event) => {
   const { target, keyCode } = event
   const isVimKey = isVimMode(event)
   if (keyCode === 37 || isVimKey('h')) {
@@ -55,7 +54,7 @@ const onKeyDown = (wrapper, event) => {
   }
 
   // Get all focusable element in element
-  const focusable = wrapper.querySelectorAll(focusableSelector)
+  const focusable = document.querySelectorAll(focusableSelector)
 
   // Get index of currently focused element
   const index = Array.prototype.findIndex.call(focusable, (el) => el === target)
@@ -71,20 +70,14 @@ const onKeyDown = (wrapper, event) => {
   }
 }
 
-class KeyboardNav extends React.Component {
-  onKeyDown(event) {
-    onKeyDown(this.wrapper, event)
-  }
-  render() {
-    return (
-      <div onKeyDown={this.onKeyDown.bind(this)} ref={(el) => { this.wrapper = el }}>
-        {this.props.children}
-      </div>
-    )
-  }
-}
+const KeyboardNav = ({ children })=> (
+    <div onKeyDown={onKeyDown}>
+      {children}
+    </div>
+  )
 
-KeyboardNav.propTypes = {
+
+    KeyboardNav.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.arrayOf(PropTypes.element),
