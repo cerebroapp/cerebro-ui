@@ -1,6 +1,6 @@
 {
   "name": "@cerebroapp/cerebro-ui",
-  "version": "2.0.0-alpha.2",
+  "version": "2.0.0-alpha.4",
   "description": "Package with common UI components for Cerebro plugins",
   "main": "dist/index.js",
   "repository": "cerebroapp/cerebro-ui",
