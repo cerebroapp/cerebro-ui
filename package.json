@@ -26,19 +26,17 @@
     "url": "https://github.com/cerebroapp/cerebro-ui/issues"
   },
   "homepage": "https://github.com/cerebroapp/cerebro-ui#readme",
-  "dependencies": {
-    "@electron/remote": "2.0.9",
-    "cerebro-tools": "0.1.8",
-    "simple-plist": "1.1.1"
-  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@rollup/plugin-typescript": "^8.3.0",
     "@types/react": "^18.0.15",
+    "@types/react-fontawesome": "^1.6.5",
+    "@types/react-select": "^5.0.1",
     "css-loader": "^6.5.1",
     "html-webpack-plugin": "^5.5.0",
     "identity-obj-proxy": "^3.0.0",
+    "prop-types": "15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-fontawesome": "1.7.1",
@@ -47,10 +45,6 @@
     "rollup-plugin-dts": "^4.0.1",
     "rollup-plugin-postcss": "^4.0.1",
     "style-loader": "^3.3.1",
-    "prop-types": "15.8.1",
     "typescript": "^4.7.4"
-  },
-  "peerDependencies": {
-    "electron": "20.2.0"
   }
 }
