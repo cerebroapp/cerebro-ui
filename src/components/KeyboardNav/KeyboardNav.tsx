@@ -9,7 +9,7 @@ import { focusableSelector } from '../utils'
  * @param  {Array<DOMElement>} elements
  * @param  {Integer} index
  */
-const moveSelectionTo = (elements, index) => {
+const moveSelectionTo = (elements: any, index: number) => {
   let nextIndex = index
   if (index < 0) {
     nextIndex = elements.length - 1
@@ -26,7 +26,7 @@ const vimKeyCodes = {
   l: 76
 }
 
-const isVimMode = (event) => (key) => (
+const isVimMode = (event: any) => (key: 'h' | 'j' | 'k' | 'l') => (
   vimKeyCodes[key] === event.keyCode && (event.metaKey || event.ctrlKey)
 )
 
@@ -35,17 +35,22 @@ const isVimMode = (event) => (key) => (
  *
  * @param  {KeyboardEvent} event
  */
-const onKeyDown = (event) => {
+const onKeyDown = (event: any) => {
   const { target, keyCode } = event
   const isVimKey = isVimMode(event)
   if (keyCode === 37 || isVimKey('h')) {
     // Move control back to main list when ← is clicked or cmd/ctrl+h
-    const mainInput = document.querySelector('#main-input')
+    const mainInput = document.querySelector('#main-input') as any
     const position = mainInput.value.length
-    mainInput.focus()
-    mainInput.setSelectionRange(position, position)
+    
+    if(mainInput) {
+      mainInput.focus()
+      mainInput.setSelectionRange(position, position)
+    }
+    
     event.preventDefault()
     event.stopPropagation()
+
     return false
   }
   if (keyCode !== 40 && keyCode !== 38 && !isVimKey('j') && !isVimKey('k')) {

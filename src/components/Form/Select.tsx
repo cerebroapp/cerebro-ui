@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react'
 import ReactSelect from 'react-select'
-import CreatableSelect from 'react-select/creatable'
+import Creatable from 'react-select/creatable'
 import Wrapper from './Wrapper'
 
 interface SelectProps {
@@ -15,13 +15,13 @@ interface SelectProps {
 }
 
 const Select = ({ label, value, onChange, description, options, multi, clearable, creatable }: SelectProps): ReactElement => {
-  const Component = creatable ? CreatableSelect : ReactSelect
+  const Component = creatable ? Creatable : ReactSelect
   return (
     <Wrapper label={label} description={description}>
       <Component
         isMulti={multi}
         value={value}
-        clearable={clearable}
+        isClearable={clearable}
         options={options}
         onChange={(newValue: any) => {
           if (!newValue) {
