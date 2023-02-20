@@ -28,6 +28,7 @@
   "homepage": "https://github.com/cerebroapp/cerebro-ui#readme",
   "dependencies": {
     "@electron/remote": "2.0.9",
+    "cerebro-tools": "0.1.8",
     "simple-plist": "1.1.1"
   },
   "devDependencies": {
@@ -40,6 +41,7 @@
     "identity-obj-proxy": "^3.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-fontawesome": "1.7.1",
     "react-select": "5.7.0",
     "rollup": "^2.60.0",
     "rollup-plugin-dts": "^4.0.1",
