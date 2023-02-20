@@ -1,10 +1,21 @@
-import PropTypes from 'prop-types'
+import React, { ReactElement } from 'react'
 import ReactSelect from 'react-select'
-import Creatable from "react-select/creatable"
+import CreatableSelect from 'react-select/creatable'
 import Wrapper from './Wrapper'
 
-const Select = ({ label, value, onChange, description, options, multi, clearable, creatable }) => {
-  const Component = creatable ? Creatable : ReactSelect
+interface SelectProps {
+  label?: string
+  value?: string | number | Array<string | number>
+  onChange: any
+  description?: string
+  options: any
+  multi?: boolean
+  clearable?: boolean
+  creatable?: boolean
+}
+
+const Select = ({ label, value, onChange, description, options, multi, clearable, creatable }: SelectProps): ReactElement => {
+  const Component = creatable ? CreatableSelect : ReactSelect
   return (
     <Wrapper label={label} description={description}>
       <Component
@@ -12,31 +23,16 @@ const Select = ({ label, value, onChange, description, options, multi, clearable
         value={value}
         clearable={clearable}
         options={options}
-        onChange={newValue => {
+        onChange={(newValue: any) => {
           if (!newValue) {
             return newValue
           }
-          const changedValue = multi ? newValue.map(val => val.value) : newValue.value
+          const changedValue = multi ? newValue.map((val: any) => val.value) : newValue.value
           onChange(changedValue)
         }}
       />
     </Wrapper>
   )
-}
-
-Select.propTypes = {
-  label: PropTypes.string,
-  value: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-    PropTypes.array,
-  ]),
-  onChange: PropTypes.func.isRequired,
-  description: PropTypes.string,
-  options: PropTypes.array.isRequired,
-  multi: PropTypes.bool,
-  clearable: PropTypes.bool,
-  creatable: PropTypes.bool
 }
 
 export default Select

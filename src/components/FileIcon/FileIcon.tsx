@@ -1,7 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { ReactElement, memo } from 'react'
 import getFileIcon from './getFileIcon'
-import { memoize } from 'cerebro-tools'
+
+interface FileIconProps {
+  className?: string
+  path: string
+}
 
 /**
  * Render icon for provided path.
@@ -11,15 +14,10 @@ import { memoize } from 'cerebro-tools'
  * @param  {String} options.path
  * @return {Function}
  */
-const FileIcon = ({ className, path }) => {
+const FileIcon = ({ className, path }: FileIconProps): ReactElement | null => {
   const src = getFileIcon(path)
   
   return src ? <img src={src} alt="" className={className} />: null
 }
 
-FileIcon.propTypes = {
-  className: PropTypes.string,
-  path: PropTypes.string.isRequired
-}
-
-export default memoize(FileIcon)
+export default memo(FileIcon)

@@ -1,7 +1,14 @@
-import PropTypes from 'prop-types'
+import React, { ReactElement } from 'react'
 import styles from './styles.module.css'
 
-const Checkbox = ({ label, value, onChange, description }) => (
+interface CheckboxProps {
+  label?: string
+  value?: boolean
+  onChange: any
+  description?: string
+}
+
+const Checkbox = ({ label, value, onChange, description }: CheckboxProps): ReactElement => (
   <div className={styles.item}>
     <div className={styles.itemValueWithoutLabel}>
       <label>
@@ -17,12 +24,5 @@ const Checkbox = ({ label, value, onChange, description }) => (
     </div>
   </div>
 )
-
-Checkbox.propTypes = {
-  label: PropTypes.string,
-  value: PropTypes.bool,
-  onChange: PropTypes.func.isRequired,
-  description: PropTypes.string,
-}
 
 export default Checkbox

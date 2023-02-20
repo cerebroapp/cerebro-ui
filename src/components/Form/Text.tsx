@@ -1,8 +1,16 @@
-import PropTypes from 'prop-types'
+import React, { ReactElement } from 'react'
 import Wrapper from './Wrapper'
 import styles from './styles.module.css'
 
-const Input = ({ label, value, onChange, description, type }) => (
+interface InputProps {
+  label?: string
+  value?: string | number
+  onChange: any
+  description?: string
+  type: string
+}
+
+const Input = ({ label, value, onChange, description, type }: InputProps): ReactElement => (
   <Wrapper label={label} description={description}>
     <input
       type={type}
@@ -12,16 +20,5 @@ const Input = ({ label, value, onChange, description, type }) => (
     />
   </Wrapper>
 )
-
-Input.propTypes = {
-  label: PropTypes.string,
-  value: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-  ]),
-  onChange: PropTypes.func.isRequired,
-  description: PropTypes.string,
-  type: PropTypes.string.isRequired,
-}
 
 export default Input

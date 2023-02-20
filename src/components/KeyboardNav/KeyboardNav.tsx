@@ -1,5 +1,4 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { ReactElement } from 'react'
 import { focusableSelector } from '../utils'
 
 /**
@@ -70,18 +69,14 @@ const onKeyDown = (event) => {
   }
 }
 
-const KeyboardNav = ({ children })=> (
-    <div onKeyDown={onKeyDown}>
-      {children}
-    </div>
-  )
-
-
-    KeyboardNav.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.element,
-    PropTypes.arrayOf(PropTypes.element),
-  ])
+interface KeyboardNavProps {
+  children: React.ReactNode
 }
+
+const KeyboardNav = ({ children }: KeyboardNavProps): ReactElement => (
+  <div onKeyDown={onKeyDown}>
+    {children}
+  </div>
+)
 
 export default KeyboardNav

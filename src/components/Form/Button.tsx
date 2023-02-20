@@ -1,18 +1,18 @@
-import PropTypes from 'prop-types'
+import React, { ReactElement } from 'react'
 import styles from './styles.module.css'
 
-const Button = ({ label, onClick, description }) => (
+interface ButtonProps {
+  label?: string
+  onClick: any
+  description?: string
+}
+
+const Button = ({ label, onClick, description }: ButtonProps): ReactElement => (
   <button
     title={description}
     onClick={({ target }) => onClick(target)}
     className={styles.button}
   >{label}</button>
 )
-
-Button.propTypes = {
-  label: PropTypes.string,
-  onClick: PropTypes.func.isRequired,
-  description: PropTypes.string,
-}
 
 export default Button

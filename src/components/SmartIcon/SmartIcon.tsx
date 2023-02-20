@@ -1,7 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { memo, ReactElement } from 'react'
 import FileIcon from '../FileIcon'
-import { memoize } from 'cerebro-tools'
 import FontAwesome from 'react-fontawesome'
 
 /**
@@ -11,12 +9,17 @@ import FontAwesome from 'react-fontawesome'
  * @param  {String} path
  * @return {Boolean}
  */
-const isImage = (path) => !!path.match(/(^data:)|(\.(png|jpe?g|svg|ico)$)/)
+const isImage = (path: string): boolean => !!path.match(/(^data:)|(\.(png|jpe?g|svg|ico)$)/)
 
 /**
  * Check if provided string matches a FontAwesome icon
  */
-const isFontAwesome = (path) => path.match(/^fa-(.+)$/)
+const isFontAwesome = (path: string) => path.match(/^fa-(.+)$/)
+
+interface SmartIconProps {
+  className?: string
+  path: string
+}
 
 /**
  * This component renders:
@@ -27,7 +30,7 @@ const isFontAwesome = (path) => path.match(/^fa-(.+)$/)
  * @param  {String} options.path
  * @return {Function}
  */
-const SmartIcon = ({ className, path }) => {
+const SmartIcon = ({ className, path }: SmartIconProps): ReactElement => {
   const fontAwesomeMatches = isFontAwesome(path)
   if (fontAwesomeMatches) {
     return <FontAwesome
@@ -43,9 +46,4 @@ const SmartIcon = ({ className, path }) => {
   )
 }
 
-SmartIcon.propTypes = {
-  path: PropTypes.string.isRequired,
-  className: PropTypes.string,
-}
-
-export default memoize(SmartIcon)
+export default memo(SmartIcon)

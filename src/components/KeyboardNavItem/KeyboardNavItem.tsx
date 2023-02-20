@@ -1,12 +1,20 @@
-import PropTypes from 'prop-types'
+import React, { ReactElement } from 'react'
 import styles from './styles.module.css'
 
-const KeyboardNavItem = ({ tagName, ...props }) => {
+interface KeyboardNavItemProps {
+  tagName?: string
+  onSelect?: any
+  onKeyDown?: any
+  className?: string
+}
+
+const KeyboardNavItem = ({ tagName, ...props }: KeyboardNavItemProps): ReactElement => {
   let className = styles.item
   className += props.className ? ` ${props.className}` : ''
   const onSelect = props.onSelect || (() => {})
   const onClick = onSelect
-  const onKeyDown = (event) => {
+
+  const onKeyDown = (event: any) => {
     if (props.onKeyDown) {
       props.onKeyDown(event)
     }
@@ -15,23 +23,17 @@ const KeyboardNavItem = ({ tagName, ...props }) => {
       onSelect()
     }
   }
+
   const itemProps = {
     className,
     onClick,
     onKeyDown,
     tabIndex: 0,
   }
-  const TagName = tagName || 'div'
-  return (
-    <TagName {...props} {...itemProps} />
-  )
-}
 
-KeyboardNavItem.propTypes = {
-  className: PropTypes.string,
-  tagName: PropTypes.string,
-  onSelect: PropTypes.func,
-  onKeyDown: PropTypes.func,
+  return (
+    <div {...props} {...itemProps} />
+  )
 }
 
 export default KeyboardNavItem
