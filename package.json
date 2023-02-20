@@ -10,7 +10,8 @@
   ],
   "repository": "cerebroapp/cerebro-ui",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "test": "jest"
   },
   "keywords": [
     "cerebro",
@@ -27,16 +28,26 @@
   },
   "homepage": "https://github.com/cerebroapp/cerebro-ui#readme",
   "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "@mdx-js/react": "^2.1.2",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@rollup/plugin-typescript": "^8.3.0",
+    "@testing-library/react": "^14.0.0",
+    "@types/jest": "^28.1.6",
     "@types/react": "^18.0.15",
     "@types/react-fontawesome": "^1.6.5",
     "@types/react-select": "^5.0.1",
+    "babel-jest": "^27.3.1",
+    "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
     "html-webpack-plugin": "^5.5.0",
     "identity-obj-proxy": "^3.0.0",
-    "prop-types": "15.8.1",
+    "jest": "^28.1.3",
+    "jest-environment-jsdom": "^29.4.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-fontawesome": "1.7.1",
