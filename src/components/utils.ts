@@ -2,7 +2,7 @@
  * DOM selector for all focusable elements
  * @type {String}
  */
-export default [
+export const focusableSelector = [
   // Links & areas with href attribute
   'a[href]',
   'area[href]',

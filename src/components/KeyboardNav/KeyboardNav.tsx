@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import focusableSelector from '../focusableSelector'
+import { focusableSelector } from '../utils'
 
 /**
  * Focus element with index from elements array.
