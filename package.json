@@ -1,11 +1,11 @@
 {
   "name": "@cerebroapp/cerebro-ui",
-  "version": "2.0.0-alpha.4",
+  "version": "2.0.0-alpha.5",
   "description": "Package with common UI components for Cerebro plugins",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
-  "files": [
+  "fils": [
     "dist"
   ],
   "repository": "cerebroapp/cerebro-ui",
@@ -63,8 +63,5 @@
   "peerDependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
-  },
-  "publishConfig": {
-    "@cerebroapp:registry": "https://npm.pkg.github.com"
   }
 }
