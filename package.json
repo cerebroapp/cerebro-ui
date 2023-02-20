@@ -2,11 +2,16 @@
   "name": "@cerebroapp/cerebro-ui",
   "version": "2.0.0-alpha.4",
   "description": "Package with common UI components for Cerebro plugins",
-  "main": "dist/index.js",
-  "repository": "cerebroapp/cerebro-ui",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
+  "repository": "cerebroapp/cerebro-ui",
+  "scripts": {
+    "build": "rollup -c"
+  },
   "keywords": [
     "cerebro",
     "ui",
@@ -21,23 +26,27 @@
     "url": "https://github.com/cerebroapp/cerebro-ui/issues"
   },
   "homepage": "https://github.com/cerebroapp/cerebro-ui#readme",
-  "scripts": {
-    "build": "cerebro-build build",
-    "prepublish": "yarn build"
-  },
   "dependencies": {
     "@electron/remote": "2.0.9",
-    "cerebro-build": "^1.2.0",
-    "cerebro-tools": "0.1.8",
-    "prop-types": "15.8.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-fontawesome": "1.7.1",
-    "react-select": "5.7.0",
     "simple-plist": "1.1.1"
   },
   "devDependencies": {
-    "@cerebroapp/cerebro-scripts": "1.0.0-alpha.6"
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-typescript": "^8.3.0",
+    "@types/react": "^18.0.15",
+    "css-loader": "^6.5.1",
+    "html-webpack-plugin": "^5.5.0",
+    "identity-obj-proxy": "^3.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-select": "5.7.0",
+    "rollup": "^2.60.0",
+    "rollup-plugin-dts": "^4.0.1",
+    "rollup-plugin-postcss": "^4.0.1",
+    "style-loader": "^3.3.1",
+    "prop-types": "15.8.1",
+    "typescript": "^4.7.4"
   },
   "peerDependencies": {
     "electron": "20.2.0"
