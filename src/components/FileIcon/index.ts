@@ -1,1 +1,1 @@
-export { default } from './SmartIcon'
+export { default } from './FileIcon'
