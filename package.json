@@ -63,5 +63,8 @@
   "peerDependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
+  },
+  "publishConfig": {
+    "@cerebroapp:registry": "https://npm.pkg.github.com"
   }
 }
